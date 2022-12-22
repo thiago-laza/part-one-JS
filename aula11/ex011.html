@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+    
+</head>
+
+<body>
+    <h1>VERIFICA SE É BRASILEIRO</h1>
+    Qual país você nasceu?<input type="text" name="texnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="verifica()">
+    <div id="res"></div>
+
+    <script>
+        function verifica(){
+            var txtnac = window.document.getElementById('txtnac')//pega o texto do input
+            var res = window.document.getElementById("res")// "local" que vai mostrar a resposta
+            var nac = (txtnac.value).toUpperCase() //passa do HTML para string
+            res.innerHTML = `<p> Sua resposta foi <strong>${nac}</strong></p>`//imprime a resposta
+            if(nac == "BRASIL"){
+                res.innerHTML += `Você é brasileiro!`
+            }else{
+                res.innerHTML += `Você não é brasileiro!`
+            }
+        }
+    </script>
+    
+</body>
+</html>
